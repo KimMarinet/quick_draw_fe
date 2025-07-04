@@ -1,5 +1,5 @@
 const categories = {
-  binoculars: '안경',
+  binoculars: '쌍안경',
   basket: '바구니',
   beach: '해변가',
   apple: '사과',
