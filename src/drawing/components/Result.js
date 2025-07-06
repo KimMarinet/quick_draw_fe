@@ -4,16 +4,34 @@ import { MediumButton } from '../../global/components/Buttons';
 import categories from '../global/categories';
 import color from '../../global/styles/color';
 import fontsize from '../../global/styles/fontsize';
-import loadingImg from '../../global/images/loading.gif'
+import loadingImg from '../../global/images/loading.gif';
 
 const { success, light } = color;
 const { medium } = fontsize;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  .button-group {
+    display: flex;
+
+    button {
+      flex-grow: 1;
+      width: 0;
+    }
+
+    button + button {
+      margin-left: 5px;
+    }
+
+    .loading {
+      height: 58px;
+    }
+  }
+`;
 
 const Result = ({ onClick, onRefresh, category, eq, predictions, loading }) => {
   return (
     <Wrapper>
+      <div className="button-group">
         {loading ? (
             <img src={loadingImg} alt="loading" className="loading" />
         ) : (
@@ -21,16 +39,17 @@ const Result = ({ onClick, onRefresh, category, eq, predictions, loading }) => {
             제출
             </MediumButton>
         )}
-        <MediumButton type="button" onClick={onRefresh}>
+        <MediumButton type="button" onClick={onRefresh} bg ="info">
             한번더
         </MediumButton>
-        {predictions && predictions.length > 0 && (
-            <StyledPredictionBox
-            items={predictions}
-            eq={eq}
-            category={category[1]}
-            />
-        )}
+      </div>
+      {predictions && predictions.length > 0 && (
+          <StyledPredictionBox
+          items={predictions}
+          eq={eq}
+          category={category[1]}
+          />
+      )}
     </Wrapper>
   );
 };

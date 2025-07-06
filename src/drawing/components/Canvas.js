@@ -7,6 +7,7 @@ const { dark } = color;
 const StyledCanvas = styled.canvas`
     border: 1px solid ${dark};
     margin-bottom: 15px;
+    border-radius: 3px;
 `;
 
 const Canvas = ({callback}) => {
