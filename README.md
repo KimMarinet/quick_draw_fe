@@ -26,5 +26,10 @@
   > 이미지 제출 혹은 재시도(onRefresh)
   > 이미지 제출 후 예측 결과 값을 표기 (PredictionBox)
 
-#### ✅ FE 구현 사진
+#### ✅ Simple 코드 리뷰 이미지
+![Class](https://github.com/KimMarinet/quick_draw_fe/blob/master/img/Class%20Diagram.png)
 
+#### ✅ FE 구현 사진
+![Class](https://github.com/KimMarinet/quick_draw_fe/blob/master/img/main.png)
+<p align="center"><img src="https://github.com/KimMarinet/quick_draw_fe/blob/master/img/result1.png"/></p>
+<p align="center"><img src="https://github.com/KimMarinet/quick_draw_fe/blob/master/img/result2.png"/></p>
